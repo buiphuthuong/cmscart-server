@@ -18,6 +18,9 @@ mongoose
   .catch((err) => console.log(err))
 app.use(cors())
 app.use(express.json())
+app.use('/', (req, res) => {
+  res.send('Welcome to my demo')
+})
 app.use('/api/users', userRoute)
 app.use('/api/auth', authRoute)
 app.use('/api/products', productRoute)
