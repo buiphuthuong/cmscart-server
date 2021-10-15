@@ -1,0 +1,68 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"wmd7",
+    "email":"buiphuthuong7@gmail.com",
+    "password":"wmd7"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username":"wmd9",
+    "password":"wmd1"
+}
+//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNGI0Y2FkNjA3MTIzYjc5NmY2ZDY3NCIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2MzIzMzA4MzIsImV4cCI6MTYzMjU5MDAzMn0.rSZS6eRF68vx0Co7WDMuZtdesJ4NE9ta4BMSFBs4Vw0
+//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNGI0Y2FkNjA3MTIzYjc5NmY2ZDY3NCIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2MzIzMzE1MzcsImV4cCI6MTYzMjU5MDczN30.9bVs5cb7mr9TOIVFDxyBFiW7iyO8g8GC48c4FeySYeg
+###
+PUT http://localhost:5000/api/users/614b6cf100429ff6c6262744
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNGI2Y2YxMDA0MjlmZjZjNjI2Mjc0NCIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2MzIzMzMwNzgsImV4cCI6MTYzMjU5MjI3OH0.0YpZawF-4qJsP2sw0SnXSDcryxHDbaIApqbSSH724iE
+
+{
+    "password":"wmd1"
+}
+
+###
+DELETE http://localhost:5000/api/users/614b4cad607123b796f6d674
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNGI2Y2YxMDA0MjlmZjZjNjI2Mjc0NCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzMjMzNDEyNiwiZXhwIjoxNjMyNTkzMzI2fQ.hbTAhmnzHXYi6FcPGyXY1ZzVwKITkR4SFyxZIX91NZk
+
+###
+POST http://localhost:5000/api/products/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNGI2Y2YxMDA0MjlmZjZjNjI2Mjc0NCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzMzQxNTAwOCwiZXhwIjoxNjMzNjc0MjA4fQ.gg2o6iJzHhh-HQuC-SvnhdT5YykBLz2A_4HGZbVOfbQ
+
+{
+    "title":"Nike tshirt 8",
+    "desc":"test",
+    "img":"https://assets.myntassets.com/fl_progressive/h_960,q_80,w_720/v1/assets/images/2045220/2017/12/12/11513060919084-Jockey-Men-Red-Solid-Round-Neck-T-shirt-7891513060918864-1.jpg",
+    "categories":["tshirt","man"],
+    "color":["Red","blue"],
+    "size":"L",
+    "price":60
+}
+
+###
+POST http://localhost:5000/api/orders/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNGMyNWVkYjY4NzMwMGQ2ZDAzNWRhMSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2MzIzODA0MDgsImV4cCI6MTYzMjYzOTYwOH0.LTUopHRQSSN9Aq_kXb_w7hFTnySDzLR7M8ICMTU_lGc
+
+{
+    "userId":"614c25edb687300d6d035da1",
+    "amount":200,
+    "products":[
+        {
+            "productId":"614bf89830317c6a67f99c5f",
+            "quantity":"2"
+        
+        }],
+    "address":"Gray"
+} 
+
+
+###
+GET http://localhost:5000/api/orders/income
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNGI2Y2YxMDA0MjlmZjZjNjI2Mjc0NCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzMjM4MTE4MCwiZXhwIjoxNjMyNjQwMzgwfQ.-3Ek43sipAgwSO_N0zmkLh-WaDlMUUZk-8dH2ixYnbc
