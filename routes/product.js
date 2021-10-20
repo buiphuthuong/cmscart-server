@@ -48,6 +48,7 @@ router.get('/sku/:sku', async (req, res) => {
   try {
     const product = await Product.findOne({ sku: req.params.sku }).exec()
     console.log(product)
+    console.log(req.params.sku)
     res.status(200).json(product)
   } catch (error) {
     res.status(500).json(error)
