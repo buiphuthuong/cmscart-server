@@ -47,7 +47,7 @@ router.delete('/:id', verifyTokenAndAdmin, async (req, res) => {
 router.get('/sku/:sku', async (req, res) => {
   try {
     const product = await Product.find({ sku: req.params.sku })
-
+    console.log(product)
     res.status(200).json(product)
   } catch (error) {
     res.status(500).json(error)
